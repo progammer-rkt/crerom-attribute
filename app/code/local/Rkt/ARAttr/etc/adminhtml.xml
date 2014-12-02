@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Magento
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License 3.0 (OSL-3.0)
+* that is bundled with this package in the file LICENSE_Rkt_Sizechart.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to rajeevphpdeveloper@gmail.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* This extension is only be used with Magento. It is used to change Magento's
+* custom behaviour. To get more details on what this module does, please have a look on
+* About_Rkt_Sizechart.txt in the root folder
+*
+**/
+
+/**
+* admin configuration
+*
+* @category extension
+* @package Rkt_Sizechart
+* @author programmer_rkt
+*/
+-->
+<config>
+    <menu>
+         <catalog>
+            <children>
+                <rkt_arattr translate="title" module="rkt_arattr">
+                    <title>Manage My Custom Attribute</title>
+                    <sort_order>100</sort_order>
+                    <children>
+                    	<install_attr translate="title" module="rkt_arattr">
+                    		<title>Install My Attribute</title>
+                    		<action>adminhtml/catalog_aRAttr/install</action>
+                    		<sort_order>10</sort_order>
+                    	</install_attr>
+                    	<uninstall_attr translate="title" module="rkt_arattr">
+                    		<title>Uninstall My Attribute</title>
+                    		<action>adminhtml/catalog_aRAttr/remove</action>
+                    		<sort_order>20</sort_order>
+                    	</uninstall_attr>
+                    </children>
+                </rkt_arattr>
+            </children>
+         </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <rkt_arattr translate="title">
+                                <title>Manage My Custom Attribute</title>
+                                <sort_order>30</sort_order>
+	                            <children>
+	                    			<install_attr translate="title" module="rkt_arattr">
+			                    		<title>Install My Attribute</title>n>
+			                    		<sort_order>10</sort_order>
+			                    	</install_attr>
+			                    	<uninstall_attr translate="title" module="rkt_arattr">
+			                    		<title>Uninstall My Attribute</title>
+			                    		<sort_order>20</sort_order>
+			                    	</uninstall_attr>
+			                    </children>
+                            </rkt_arattr>
+                        </children>
+                    </catalog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config> 

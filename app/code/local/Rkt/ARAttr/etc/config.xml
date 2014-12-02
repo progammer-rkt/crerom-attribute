@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Magento
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License 3.0 (OSL-3.0)
+* that is bundled with this package in the file LICENSE_Rkt_ARAttr.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to rajeevphpdeveloper@gmail.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* This extension is only be used with Magento. It is used to change Magento's
+* custom behaviour. To get more details on what this module does, please have a look on
+* About_Rkt_ARAttr.txt in the root folder
+*
+**/
+
+/**
+* configuration
+*
+* @category extension
+* @package Rkt_ARAttr
+* @author programmer_rkt
+*/
+-->
+<config>
+	<modules>
+		<Rkt_ARAttr>
+			<version>1.0.0</version>
+		</Rkt_ARAttr>
+	</modules>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<rkt_arattr before="Mage_Adminhtml">Rkt_ARAttr_Adminhtml</rkt_arattr>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<global>
+		<blocks>
+            <rkt_arattr>
+                <class>Rkt_ARAttr_Block</class>
+            </rkt_arattr>
+        </blocks>
+		<models>
+            <rkt_arattr>
+                <class>Rkt_ARAttr_Model</class>
+                <resourceModel>rkt_arattr_resource</resourceModel>
+            </rkt_arattr>
+            <rkt_arattr_resource>
+                <class>Rkt_ARAttr_Model_Resource_Setup</class>
+            </rkt_arattr_resource>
+        </models>
+		<helpers>
+			<rkt_arattr>
+				<class>Rkt_ARAttr_Helper</class>
+			</rkt_arattr>
+		</helpers>
+	</global>
+	<adminhtml>
+        <layout>
+            <updates>
+                <rkt_arattr>
+                    <file>rkt_arattr.xml</file>
+                </rkt_arattr>
+            </updates>
+        </layout>
+    </adminhtml>
+</config> 
