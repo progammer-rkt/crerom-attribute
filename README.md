@@ -169,5 +169,5 @@ License
 Copyright
 ---------
 
-|copy| 2014 Company
+All rights reserved to RktExtensions @  2013
 
